@@ -18,7 +18,7 @@ end
 Citizen.CreateThread(initializeBlip)
 
 RegisterCommand(
-    "removeblip",
+    "poistablippi",
     function(source,args)
         if DoesBlipExist(blip) then
             TriggerServerEvent("blips:takeBlip")
@@ -26,7 +26,7 @@ RegisterCommand(
     end
 )
 
-RegisterCommand("bliptome", function(source, args) 
+RegisterCommand("blippiminuun", function(source, args) 
     local x, y, z = table.unpack(GetEntityCoords(PlayerPedId()))
     TriggerServerEvent("blips:takeBlip", x, y, z)
 end)
